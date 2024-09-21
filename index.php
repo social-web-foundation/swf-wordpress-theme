@@ -2,7 +2,7 @@
 
 <div class="internal-content">
 
-<h1><?php wp_title(); ?></h1>
+<h1><?php wp_title(''); ?></h1>
 
 <div class="article-copy">
   <?php

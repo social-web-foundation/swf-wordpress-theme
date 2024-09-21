@@ -22,11 +22,10 @@
                 </a>
             </div>
             <nav>
-
                 <?php
                     wp_nav_menu( array(
                         'theme_location' => 'primary',
-                        'container' => false,
+                        'container' => true,
                         'menu_class' => 'highlight1',
                     ) );
                 ?>
