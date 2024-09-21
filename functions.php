@@ -10,9 +10,6 @@ function social_web_foundation_enqueue_styles() {
 
     // Add jQuery (optional, if needed for any functionality)
     wp_enqueue_script('jquery');
-
-    // Enqueue custom scripts (if any)
-    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/js/custom.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'social_web_foundation_enqueue_styles');
 
