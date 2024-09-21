@@ -1,0 +1,1282 @@
+/* SITE WIDE STUFF AND BASICALLY VARIABLES FOR SETTING COLORS ETC. */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+em, strong, a, ul, li {
+    background-color: transparent;
+}
+
+.menu-button {
+    display: none; /* Hide by default */
+    position: relative;
+    z-index: 1001;
+}
+
+/* Basic fade-in tricks */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+/* General color and color accents throughout the site */
+
+.homepage {
+    background-color: white;
+}
+
+#top-bar-homepage {
+    background-color: white;
+}
+
+/* This is here so if you want to change the color scheme per button or section */
+.highlight1, .highlight2, .highlight3, .highlight4, .highlight5 {
+    background-color: #e8623f;
+    transition: background-color 0.05s ease-in;
+}
+
+.highlight1:hover, .highlight2:hover, .highlight3:hover, .highlight4:hover, .highlight5:hover {
+    background-color: #de4428;
+}
+
+
+
+
+
+
+
+/* TOP NAVIGATION BAR */
+
+/* Top Bar Styles */
+.top-bar {
+    width: 100%;
+    padding: 16px 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+/* Container for Centered Content with Fixed Margins */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 45px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: rgba(0,0,0,1);
+}
+
+#logo-image {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+
+.logo a:hover #logo-image {
+    content: url('../images/logo-5.png');
+    opacity: 100%;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 9px 20px;
+    margin: 0;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.selected-menu {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SITE WIDE NORMAL CONTENT & HEADINGS ETC. */
+
+/* Normal Content */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 45px 0px 45px;
+}
+
+.content h1 {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.content p {
+    font-family: neue-haas-grotesk-display, sans-serif;
+}
+
+/* Additional Nested Internal Page Normal Content */
+.internal-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 45px 0px 45px;
+}
+
+.internal-content h1 {
+    padding-top: 120px;
+    padding-bottom: 10px;
+    font-size: 65px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.internal-content blockquote {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin: 0px 0px 120px 0px;
+    padding: 100px 40px 100px 40px;
+    border: 0.5px black solid;
+    border-radius: 20px;
+}
+
+.internal-content p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 24px;
+    padding: 0 400px 120px 2px;
+    line-height: 1.35;
+    color: rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+
+
+
+/* FRONT PAGE HERO IMAGE AND TEXT */
+
+/* Front Page Hero Content */
+#hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 45px 65px 45px;
+}
+
+#hero h1 {
+    margin: 180px 0 80px 0;
+    font-size: 113px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: -1px;
+    line-height: 103%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#hero-image {
+    opacity: 70%;
+    margin-bottom: 100px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: none;
+}
+
+#hero p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-size: 28px;
+    padding: 0 330px 30px 3px;
+    font-weight: 300;
+}
+
+a.inline-link {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    color: black;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.16);
+    font-size: 16px;
+    padding: 9px 20px;
+    border-radius: 20px;
+}
+
+a.inline-link:hover {
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FRONT PAGE & INTERNAL PROJECTS GRID */
+
+/* Grid container for the projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px; /* Space between the columns */
+    padding-top: 60px;
+}
+
+/* Individual project list-view styling */
+.project {
+    margin-bottom: 40px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+    padding: 0;
+    margin: 0;
+}
+
+.project h2 {
+    padding: 12px 0 5px 0;
+    margin: 0;
+    font-size: 24px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.project h2 a {
+    text-decoration: none;
+    border-bottom: none;
+    color: rgba(0,0,0,1);
+}
+
+.project h2 a:hover {
+    border-bottom: 1px dotted black;
+}
+
+.project p {
+    color: rgba(0,0,0,0.5);
+    font-size: 18px;
+    line-height: 1.45;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    padding: 0;
+}
+
+.projects-button {
+    padding-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FRONT PAGE BLOG POSTS GRID */
+
+/* Grid container for the blog posts */
+.blog-grid {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Six equal columns */
+    column-gap: 30px; /* Space between the columns */
+}
+
+.blog-timestamp {
+    grid-column: span 1; /* Occupies the first column */
+    padding-top: 27px;
+    font-size: 20px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0px;
+    color: rgba(0,0,0,0.4);
+}
+
+.blog-post {
+    grid-column: span 5; /* Spans the remaining five columns */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Adds a thin, 50% opaque black line */
+    padding-bottom: 20px; /* Space between the content and the line */
+    padding-top: 20px;
+    margin-bottom: 0px; /* Space after the line before the next item */
+}
+
+.blog-post h2 {
+    padding: 12px 0 0px 0;
+    margin: 0;
+    font-size: 24px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.blog-post:last-child {
+    border-bottom: none; /* Removes the border from the last blog post */
+}
+
+.blog-post h3 {
+    color: rgba(0,0,0,0.5);
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: normal;
+    font-family: neue-haas-grotesk-text, sans-serif;
+}
+
+.blog-post h3 a {
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+}
+
+.blog-post h3 a:hover {
+    text-decoration: none;
+    border-bottom: dotted 1px black;
+}
+
+.blog-posts-button {
+    padding-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FRONT PAGE PARTNER FORMATTING */
+
+/* Front page formatting for the Partner grid */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Creates six equal columns */
+    column-gap: 30px; /* Space between the image columns */
+    row-gap: 20px; /* Space between the image rows */
+    padding-bottom: 70px;
+    padding-top: 20px;
+}
+
+.partner-grid img {
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the images fill their grid cells without distortion */
+}
+
+/* Front page formatting for the advisory grid - the main difference is a smaller buffer at the bottom */
+.advisory-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Creates six equal columns */
+    column-gap: 30px; /* Space between the image columns */
+    row-gap: 20px; /* Space between the image rows */
+    padding-top: 20px; 
+}
+
+.advisory-grid img {
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the images fill their grid cells without distortion */
+}
+
+
+
+
+
+
+
+
+/* MISSION PAGE & RELATED */
+
+/* PROJECTS PAGE & RELATED */
+
+/* Individual Project Page Styling */
+#individual-project-h1 {
+    margin: auto;
+    margin-top: 80px;
+    border-top: 0.5px solid rgba(0,0,0,0.2);
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 55px;
+}
+
+#individual-project-standfirst {
+    font-size: 22px;
+    width: 100%;
+    margin: auto;
+    padding-left: 225px;
+    padding-right: 225px;
+    padding-bottom: 58px;
+    line-height: 145%;
+    text-align: center;
+}
+
+.article-copy .article-media {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border-radius: 25px;
+}
+
+.article-copy h2 {
+    font-size: 28px;
+    width: 760px;
+    margin: auto;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 46px;
+}
+
+.article-copy p {
+    width: 760px;
+    margin: auto;
+    padding: 0;
+    font-size: 20px;
+    line-height: 146%;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    margin-bottom: 18px;
+}
+
+.article-copy ul {
+    width: 760px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 140%;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    margin-bottom: 30px;
+    list-style-position: inside;
+}
+
+.article-copy p strong {
+    font-weight: 600;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+/* TEAM PAGE & RELATED */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.team-member {
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+}
+
+.team-member-image {
+    grid-column: span 3;
+}
+
+.team-member-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-member-info {
+    grid-column: span 3;
+}
+
+.team-member-info h3 {
+    padding: 12px 0 5px 0;
+    margin: 0;
+    font-size: 24px;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.team-member-info p {
+    color: rgba(0,0,0,0.5);
+    font-size: 19px;
+    line-height: 1.45;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER STYLES */
+
+footer {
+    background-color: rgba(0,0,0,0);
+    color: #000000;
+    margin-top: 100px;
+    padding: 0px 0 0px 0;
+    line-height: 1.45;
+    font-family: neue-haas-grotesk-text, sans-serif;
+}
+
+footer div {
+    background-color: transparent;
+    line-height: 1.5;
+}
+
+.footer-grid {
+    border-top: 1px solid rgba(0,0,0,0.4);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Same six columns as partner grid */
+    column-gap: 30px; /* Ensure the gap matches the partner grid */
+}
+
+/* Make the first cell span the first three columns */
+.footer-logo {
+    grid-column: span 3;
+}
+
+.footer-logo img {
+    width: 260px;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li a {
+    color: rgba(0,0,0,0.5);
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    border-bottom: 1px solid black;
+}
+
+.footer-image-container {
+    position: relative;
+    width: 100%; /* Make it full width */
+    max-width: 1200px;
+    height: 155px; /* Display only the top 155px of an 800px tall image */
+    overflow: hidden; /* Hide the bottom part of the image */
+}
+
+.footer-image-container img {
+    width: 100%; /* Ensure the image covers the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0px; /* Move the image up by 200px to show only the top half */
+}
+
+
+
+
+
+
+
+
+
+
+/* EVERYTHING TO DO WITH BEING RESPONSIVE AND OTHER CLIENTS */
+
+/* Responsive Adjustments */
+
+@media (max-width: 1000px) {
+
+    #hero h1 {
+        font-size: 90px;
+    }
+
+    #hero p {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-size: 24px;
+        padding: 0 220px 30px 3px;
+        font-weight: 300;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Eight equal columns like in partner grid */
+    }
+
+    .blog-timestamp {
+        grid-column: span 2; /* Occupies the first two columns */
+    }
+
+    .blog-post {
+        grid-column: span 6; /* Spans the remaining four columns */
+    }
+
+    .internal-content h1 {
+        font-size: 60px;
+    }
+
+    .internal-content #standfirst {
+        font-size: 21px;
+        padding-right: 300px;
+        padding-bottom: 80px;
+    }
+
+    .internal-content blockquote {
+        padding: 60px 50px;
+        font-size: 45px;
+        letter-spacing: 0.5px;
+        margin-bottom: 80px;
+    }
+
+    #individual-project-h1 {
+        /* margin: auto;
+           margin-top: 80px;
+           border-top: 0.5px solid rgba(0,0,0,0.2);
+           text-align: center; */
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 50px;
+    }
+
+    #individual-project-standfirst {
+        font-size: 20px;
+        padding-left: 180px;
+        padding-right: 180px;
+        /* width: 100%;
+           margin: auto;
+           padding-bottom: 58px;
+           line-height: 145%;
+           text-align: center; */
+    }
+
+    .team-member {
+        grid-column: span 6;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .team-member-image {
+        grid-column: span 2;
+    }
+
+    .team-member-image img {
+        border-radius: 10px;
+    }
+
+    .team-member-info {
+        grid-column: span 3;
+    }
+
+    .team-member-info h3 {    
+        padding: 0px 0 5px 0;
+        font-size: 22px;
+    }
+
+    .team-member-info p {
+        font-size: 17px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .container {
+    }
+
+    #hero h1 {
+        margin-top: 170px;
+        margin-bottom: 60px;
+        font-size: 80px;
+    }
+
+    #hero p {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-size: 21px;
+        padding: 0 220px 30px 3px;
+        font-weight: 300;
+    }
+
+    .internal-content h1 {
+        font-size: 55px;
+    }
+
+    .internal-content #standfirst {
+        font-size: 20px;
+        padding-right: 250px;
+        padding-bottom: 50px;
+    }
+
+    .internal-content blockquote {
+        padding: 60px 50px;
+        font-size: 33px;
+        letter-spacing: 0.5px;
+        margin-bottom: 60px;
+    }
+
+    .article-copy {
+        width: 100%;
+        text-align: left; /* Corrected spelling */
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0px; /* Adjust padding for margin effect */
+        padding-right: 0px;
+    }
+
+    .article-copy h2 {
+        margin: 46px 0 10px 0;
+        max-width: 100%;
+    }
+
+    .article-copy p {
+        width: 100%;
+        margin: 0 0 18px 0; /* Adds vertical margin for spacing between paragraphs */
+        padding: 0;      /* Ensures no extra padding */
+        text-align: left; /* Ensures left alignment */
+    }
+
+	.article-copy ul {
+		width: 100%;
+	}
+
+    #individual-project-h1 {
+        /* margin: auto;
+           margin-top: 80px;
+           border-top: 0.5px solid rgba(0,0,0,0.2);
+           text-align: center; */
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 45px;
+    }
+
+    #individual-project-standfirst {
+        font-size: 19px;
+        padding-left: 150px;
+        padding-right: 150px;
+        /* width: 100%;
+           margin: auto;
+           padding-bottom: 58px;
+           line-height: 145%;
+           text-align: center; */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 820px) {
+
+    .container {
+        display: flex;
+        justify-content: space-between; /* Ensure the logo is on the left and menu on the right */
+        align-items: center;
+    }
+
+    nav ul {
+        position: fixed;
+        text-align: left;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent; /* No tint, just transparency */
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+        padding: 0 40px;
+        backdrop-filter: blur(10px); /* Apply blur effect */
+        -webkit-backdrop-filter: blur(10px); /* Add this for Safari support */
+    }
+
+    nav ul.active {
+        display: flex; /* Becomes flex when active */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul li {
+        list-style: none;
+        font-size: 60px;
+        font-weight: 200;
+        border-bottom: 1px solid black;
+        padding-bottom: 12px;
+    }
+
+    nav ul li a {
+        color: black;
+        text-decoration: none;
+        padding-left: 0;
+    }
+
+    nav ul li a:hover {
+        color: #e8623f;
+    }
+
+    .highlight1 {
+        background-color: transparent;
+    }
+
+    .highlight2 {
+        background-color: transparent;
+    }
+
+    .highlight3 {
+        background-color: transparent;
+    }
+
+    .highlight4 {
+        background-color: transparent;
+    }
+
+    .highlight5 {
+        background-color: transparent;
+    }
+
+    .highlight1:hover {
+        background-color: transparent;
+    }
+
+    .highlight2:hover {
+        background-color: transparent;
+    }
+
+    .highlight3:hover {
+        background-color: transparent;
+    }
+
+    .highlight4:hover {
+        background-color: transparent;
+    }
+
+    .highlight5:hover {
+        background-color: transparent;
+    }
+
+    .menu-button {
+        display: block; /* Shows the Menu button */
+        background-color: #e8623f; /* Keep the button style similar to highlight */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-size: 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-left: auto; /* Align it to the right */
+    }
+
+    .menu-button:hover {
+        background-color: #de4428;
+    }
+
+    #hero h1 {
+        font-size: 55px;
+    }
+
+    #hero p {
+        font-family: neue-haas-grotesk-text, sans-serif;
+        font-size: 20px;
+        padding: 0 120px 30px 3px;
+        font-weight: 300;
+    }
+
+    .internal-content h1 {
+        font-size: 43px;
+    }
+
+    .internal-content #standfirst {
+        font-size: 19px;
+        padding-right: 180px;
+        padding-bottom: 40px;
+    }
+
+    .internal-content blockquote {
+        padding: 50px 40px;
+        font-size: 30px;
+        letter-spacing: 0.5px;
+        margin-bottom: 60px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    }
+
+    .footer-logo {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+        border-bottom: 0.5px solid black;
+    }
+
+    .article-copy h2 {
+        font-size: 22px;
+    }
+
+    .article-copy p {
+        font-size: 18px;
+    }
+
+    #individual-project-h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 40px;
+    }
+
+    #individual-project-standfirst {
+        font-size: 18px;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    
+    .team-grid {
+        display: block; /* Stack the team members vertically */
+    }
+
+    .team-member {
+        display: block; /* Ensure each team member block stacks */
+        margin-bottom: 30px; /* Add space between each member */
+    }
+
+    .team-member-image {
+        width: 100%; /* Make each image take full width */
+        margin-bottom: 15px; /* Add space between image and text */
+    }
+
+    .team-member-info {
+        width: 100%; /* Ensure the text also takes full width */
+        text-align: left; /* Align the text to the left */
+    }
+}
+
+
+
+
+
+/* This is where some two column things - like the project grid, turn into one column and other major reformatting thing occurs */
+
+@media (max-width: 660px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* One equal column */
+        gap: 0px; /* Space between the columns */
+        padding-top: 15px;
+    }
+
+    .blog-grid {
+        padding: 0 0 45px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0px; /* Space between the columns */
+    }
+
+    .blog-timestamp {
+        font-size: 18px;
+        font-family: neue-haas-grotesk-display, sans-serif;
+        font-weight: 500;
+        letter-spacing: 0px;
+        color: rgba(0,0,0,0.4);
+    }
+
+    .blog-post {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Adds a thin, 50% opaque black line */
+        padding-bottom: 25px; /* Space between the content and the line */
+        padding-top: 10px;
+        margin-bottom: 0px; /* Space after the line before the next item */
+    }
+
+    .blog-post h2 {
+        padding: 12px 0 0px 0;
+        margin: 0 0 0 0;
+        font-size: 24px;
+        font-family: neue-haas-grotesk-display, sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .blog-post:last-child {
+        border-bottom: none; /* Removes the border from the last blog post */
+    }
+
+    .blog-post h3 {
+        color: rgba(0,0,0,0.5);
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: normal;
+        font-family: neue-haas-grotesk-text, sans-serif;
+    }
+
+    .blog-post h3 a {
+        text-decoration: none;
+        color: rgba(0,0,0,1);
+    }
+
+    .blog-post h3 a:hover {
+        text-decoration: none;
+        border-bottom: dotted 1px black;
+    }
+
+    .partner-grid {
+        grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
+    }
+
+    .advisory-grid {
+        grid-template-columns: repeat(4, 1fr); /* Creates four equal columns */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* This is all the stuff that changes when you get to iPhones and Android devices */
+
+@media (max-width: 500px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: transparent;
+    }
+
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px 0 20px;
+    }
+
+    .internal-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 0 20px;
+    }
+
+    .internal-content #standfirst {
+		padding-right: 30px;
+		font-size: 18px;
+    }
+
+	.internal-content blockquote {
+		font-size: 20px;
+		margin-bottom: 10px;
+		}
+
+	.internal-content h2 {
+		margin-top: 40px;
+		}
+
+	.article-copy p {
+	font-size: 16px;
+	}
+
+	.article-copy .article-media {
+	margin: 20px 0;
+	}
+
+	.article-copy ul {
+	font-size: 16px;
+	}
+
+	#individual-project-h1 {
+		padding: 40px 0 40px 0;
+		font-size: 35px;
+		text-align: center;
+		line-height: 120%;
+		border-bottom: 0.5px solid black;}
+		
+	#individual-project-standfirst {
+		text-align: left;
+		padding: 20px 0 0 0;}
+		
+
+    #hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0px 0px 0px 0px;
+    }
+
+    #hero h1 {
+        font-size: 44px;
+        letter-spacing: 0px;
+        padding: 0 20px 0 20px;
+    }
+
+    #hero-image {
+        opacity: 70%;
+        margin-bottom: 60px;
+        width: 100%;
+        border-radius: 0px;
+        background-color: none;
+    }
+
+    #hero p {
+        font-size: 20px;
+        padding: 0 20px 25px 20px;
+    }
+
+	.project h2 {
+	margin: 0;
+	font-size: 20px;
+	}
+
+    .partner-grid {
+        grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    }
+
+    .advisory-grid {
+        grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    }
+
+	.team-grid {
+	margin-top: 0px;}
+
+	footer {
+	margin-top: 20px;}
+
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack everything in a single column */
+        row-gap: 20px; /* Space between elements */
+    }
+
+    .footer-logo {
+        grid-column: span 1; /* Ensure the logo takes up its own space */
+        margin-bottom: 40px; /* Space below the logo */
+    }
+
+    footer ul {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+}
