@@ -22,13 +22,13 @@
                 </a>
             </div>
             <nav>
-                <?php
-                    wp_nav_menu( array(
-                        'theme_location' => 'primary',
-                        'container' => true,
-                        'menu_class' => 'highlight1',
-                    ) );
-                ?>
+                <ul>
+                    <li><a href="/mission/" class="highlight1">Mission</a></li>
+                   <li><a href="/projects/" class="highlight2">Projects</a></li>
+                    <li><a href="/team/" class="highlight3">Team</a></li>
+                    <li><a href="/blog/" class="highlight4">Blog &uarr;</a></li>
+                    <li><a href="/contact/" class="highlight5">Contact</a></li>
+                </ul>
             </nav>
 
             <button class="menu-button">Menu</button>
