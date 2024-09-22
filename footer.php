@@ -17,9 +17,9 @@
             <div>
                 <strong>Follow us:</strong>
                 <ul>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Threads</a></li>
-                    <li><a href="#">Mastodon</a></li>
+                    <li><a href="https://socialwebfoundation.org/@swf">Social Web</a></li>
+                    <li><a href="https://x.com/socialwebfdn">X</a></li>
+                    <li><a href="https://threads.net/@socialwebfdn">Threads</a></li>
                 </ul>
             </div>
 
