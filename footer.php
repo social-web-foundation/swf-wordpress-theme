@@ -38,6 +38,37 @@
 
     <?php wp_footer(); ?>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.querySelector('.menu-button');
+        const mainNav = document.querySelector('nav ul');
 
+        // Ensure that when the window resizes, the overlay doesn't flash
+        function handleResize() {
+            if (window.innerWidth > 820) {
+                // Reset the menu state when resizing to a larger screen
+                mainNav.classList.remove('active');
+                mainNav.style.display = ''; // Reset display property
+                menuButton.textContent = 'Menu'; // Reset button text to 'Menu'
+            }
+        }
+
+        // Toggle the 'active' class to show/hide the menu
+        menuButton.addEventListener('click', function() {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                mainNav.style.display = 'none'; // Hide it after removing the class
+                menuButton.textContent = 'Menu'; // Change button text back to 'Menu'
+            } else {
+                mainNav.classList.add('active');
+                mainNav.style.display = 'flex'; // Show it when active
+                menuButton.textContent = 'Close'; // Change button text to 'Close'
+            }
+        });
+
+        // Listen for window resize to ensure no flashing occurs and close overlay above 820px
+        window.addEventListener('resize', handleResize);
+    });
+</script>
 </body>
 </html>
