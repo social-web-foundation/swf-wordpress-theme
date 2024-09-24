@@ -9,8 +9,6 @@
                 <strong>Legal:</strong>
                 <ul>
                     <li><a href="<?php echo get_permalink( get_page_by_path( 'about' ) ); ?>">About us</a></li>
-                    <li><a href="<?php echo get_permalink( get_page_by_path( 'privacy' ) ); ?>">Privacy Policy</a></li>
-                    <li><a href="<?php echo get_permalink( get_page_by_path( 'tos' ) ); ?>">Terms of Use</a></li>
                 </ul>
             </div>
 
@@ -25,9 +23,9 @@
 
             <div>
                 <strong>Address:</strong><br>
-                Line one<br>
-                Line two<br>
-                ZIP Code
+                3041 Mission St<br>
+                San Francisco, CA 94110<br>
+                USA
             </div>
         </div>
 
