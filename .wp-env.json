@@ -1,0 +1,17 @@
+{
+	"core": null,
+	"themes": [ "." ],
+	"env": {
+		"tests": {
+			"config": {
+				"WP_TESTS_DOMAIN": "example.org",
+				"WP_SITEURL": "http://example.org",
+				"WP_HOME": "http://example.org"
+			},
+			"port": 80,
+			"mappings": {
+				"wp-content/themes/swf-wordpress-theme": "."
+			}
+		}
+	}
+}
