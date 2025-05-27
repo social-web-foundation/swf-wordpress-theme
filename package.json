@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"env": "wp-env",
+		"env-start": "wp-env start && wp-env run cli wp rewrite structure '/%year%/%monthnum%/%postname%/'",
+		"env-stop": "wp-env stop"
+	},
+	"devDependencies": {
+		"@wordpress/env": "^10.10.0"
+	}
+}
