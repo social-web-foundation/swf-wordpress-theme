@@ -1,7 +1,10 @@
 <?php
 /**
- * The template for displaying posts in the Standard Post Format on index and archive pages
+ * The template for displaying posts in the Standard Post Format on index and archive pages.
+ *
+ * @package social-web-foundation
  */
+
 ?>
 
 <article <?php post_class(); ?>>
@@ -12,7 +15,13 @@
 	</header>
 	<div class="entry-content e-content" itemprop="description articleBody">
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'social-web-foundation' ), 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
-
+		<?php
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-link">' . __( 'Pages:', 'social-web-foundation' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div>
 </article>

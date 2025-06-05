@@ -57,7 +57,7 @@ function social_web_foundation_setup() {
 
 	add_theme_support( 'responsive-embeds' );
 
-	// This theme supports block template parts
+	// This theme supports block template parts.
 	add_theme_support( 'block-template-parts' );
 }
 add_action( 'after_setup_theme', 'social_web_foundation_setup' );
