@@ -37,6 +37,28 @@ function social_web_foundation_setup() {
 			'primary' => __( 'Primary Menu', 'social-web-foundation' ),
 		)
 	);
+
+	/*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'widgets',
+			'script',
+		)
+	);
+
+	add_theme_support( 'responsive-embeds' );
+
+	// This theme supports block template parts.
+	add_theme_support( 'block-template-parts' );
 }
 add_action( 'after_setup_theme', 'social_web_foundation_setup' );
 
